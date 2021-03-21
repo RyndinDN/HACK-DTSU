@@ -7,6 +7,7 @@
         "react-scripts": "^3.4.0",
         "react-helmet": "latest",
         "react": "^16.13.0",
+        "uuid": "latest",
         "react-dom": "^16.13.0",
         "@quarkly/widgets": "0.2.47",
         "@quarkly/components": "0.2.47",

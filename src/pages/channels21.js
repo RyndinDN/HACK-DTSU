@@ -4,7 +4,8 @@ import { Theme, Link, Box, Text, Icon, Hr, Input, Button } from "@quarkly/widget
 import { Helmet } from "react-helmet";
 import { GlobalQuarklyPageStyles } from "global-page-styles";
 import { RawHtml } from "@quarkly/components";
-import { MdPeople, MdMic, MdHeadset, MdSettings, MdExitToApp, MdPlayCircleOutline, MdInsertEmoticon } from "react-icons/md";
+import * as Components from "components";
+import { MdPeople, MdMic, MdHeadset, MdSettings, MdExitToApp, MdInsertEmoticon } from "react-icons/md";
 export default (() => {
 	return <Theme theme={theme}>
 		<GlobalQuarklyPageStyles pageUrl={"channels21"} />
@@ -44,9 +45,11 @@ export default (() => {
 					font="16px --fontFamily-googleMontserratAlternates"
 				>
 					<Text align-self="flex-start" margin="16px 0px 10px 0px" font="500 18px &quot;Montserrat Alternates&quot;, sans-serif">
-						КАНАЛЫ
+						<Link href="/channels" color="inherit" text-decoration="none" cursor="pointer">
+							КАНАЛЫ
+						</Link>
 					</Text>
-					<Text color="#2C94FF" align-self="flex-start">
+					<Text color="#2C94FF" align-self="flex-start" margin="5px 0px 5px 0px">
 						C Вами снова РАДИО ...
 					</Text>
 					<Box position="relative" display="flex" align-items="center" width="100%">
@@ -303,22 +306,7 @@ export default (() => {
 							Артем Лебедев
 						</Text>
 					</Box>
-					<Box
-						margin-left="30px"
-						border-radius="20px"
-						display="flex"
-						max-width="300px"
-						height="50px"
-						justify-content="space-between"
-						align-items="center"
-						border-color="#ffffff"
-						background="#dfdfdf"
-						padding="0 30px"
-					>
-						{" "}
-						<Icon category="md" icon={MdPlayCircleOutline} margin="0px 5px 0px 5px" />
-						<Hr background="black" width="155px" />
-					</Box>
+					<Components.AudioStream />
 				</Box>
 				<Box display="flex">
 					<Text margin="0px 15px 30px 50px" font="500 20px &quot;Montserrat Alternates&quot;, sans-serif" display="flex">
@@ -490,15 +478,17 @@ export default (() => {
 						</Button>
 					</Box>
 				</Box>
-				<Button
-					width="300px"
-					font-weight="bold"
-					margin="0px 30px 30px 50px"
-					background="rgba(255, 0, 0, 0.83)"
-					border-radius="10px"
-				>
-					ПОКИНУТЬ КАНАЛ
-				</Button>
+				<Link href="/channels" color="inherit" text-decoration="none" cursor="pointer">
+					<Button
+						width="300px"
+						font-weight="bold"
+						margin="0px 30px 30px 50px"
+						background="rgba(255, 0, 0, 0.83)"
+						border-radius="10px"
+					>
+						ПОКИНУТЬ КАНАЛ
+					</Button>
+				</Link>
 			</Box>
 		</Box>
 		<Link

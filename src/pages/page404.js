@@ -41,15 +41,17 @@ export default (() => {
 			>
 				К сожалению, такая страница не существует
 			</Text>
-			<Button
-				width="300px"
-				font-weight="bold"
-				margin="0px 0px 30px 0px"
-				background="#2C94FF"
-				border-radius="10px"
-			>
-				ПЕРЕЙТИ НА ГЛАВНУЮ
-			</Button>
+			<Link href="/" color="inherit" text-decoration="none" cursor="pointer">
+				<Button
+					width="300px"
+					font-weight="bold"
+					margin="0px 0px 30px 0px"
+					background="#2C94FF"
+					border-radius="10px"
+				>
+					ПЕРЕЙТИ НА ГЛАВНУЮ
+				</Button>
+			</Link>
 		</Box>
 		<Link
 			font={"--capture"}

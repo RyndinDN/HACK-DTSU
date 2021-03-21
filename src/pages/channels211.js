@@ -27,13 +27,15 @@ export default (() => {
 				position="sticky"
 				top="top"
 			>
-				<Box
-					height="30px"
-					background="url(https://uploads.quarkly.io/60560971f2b826001ebe87fd/images/logo.png?v=2021-03-20T15:17:40.537Z) 0% 0% /contain no-repeat"
-					border="none"
-					width="150px"
-					margin="50px 30px 40px"
-				/>
+				<Link href="/" color="inherit" text-decoration="none" cursor="pointer">
+					<Box
+						height="30px"
+						background="url(https://uploads.quarkly.io/60560971f2b826001ebe87fd/images/logo.png?v=2021-03-20T15:17:40.537Z) 0% 0% /contain no-repeat"
+						border="none"
+						width="150px"
+						margin="50px 30px 40px"
+					/>
+				</Link>
 				<Box
 					padding="0 25px"
 					flex-direction="column"
@@ -42,9 +44,11 @@ export default (() => {
 					font="16px --fontFamily-googleMontserratAlternates"
 				>
 					<Text align-self="flex-start" margin="16px 0px 10px 0px" font="500 18px &quot;Montserrat Alternates&quot;, sans-serif">
-						КАНАЛЫ
+						<Link href="/channels" color="inherit" text-decoration="none" cursor="pointer">
+							КАНАЛЫ
+						</Link>
 					</Text>
-					<Text color="#2C94FF" align-self="flex-start">
+					<Text color="#2C94FF" align-self="flex-start" margin="5px 0px 5px 0px">
 						C Вами снова РАДИО ...
 					</Text>
 					<Box position="relative" display="flex" align-items="center" width="100%">
@@ -487,15 +491,17 @@ export default (() => {
 						</Button>
 					</Box>
 				</Box>
-				<Button
-					width="300px"
-					font-weight="bold"
-					margin="0px 30px 30px 50px"
-					background="rgba(255, 0, 0, 0.83)"
-					border-radius="10px"
-				>
-					ЗАКОНЧИТЬ ПОДКАСТ
-				</Button>
+				<Link href="/channels" color="inherit" text-decoration="none" cursor="pointer">
+					<Button
+						width="300px"
+						font-weight="bold"
+						margin="0px 30px 30px 50px"
+						background="rgba(255, 0, 0, 0.83)"
+						border-radius="10px"
+					>
+						ЗАКОНЧИТЬ ПОДКАСТ
+					</Button>
+				</Link>
 			</Box>
 		</Box>
 		<Link

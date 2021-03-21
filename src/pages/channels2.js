@@ -3,6 +3,7 @@ import theme from "theme";
 import { Theme, Link, Box, Text, Button, Hr, Icon } from "@quarkly/widgets";
 import { Helmet } from "react-helmet";
 import { GlobalQuarklyPageStyles } from "global-page-styles";
+import { RawHtml } from "@quarkly/components";
 import { MdMic, MdHeadset, MdSettings, MdPeople } from "react-icons/md";
 export default (() => {
 	return <Theme theme={theme}>
@@ -26,13 +27,15 @@ export default (() => {
 				position="sticky"
 				top="top"
 			>
-				<Box
-					height="30px"
-					background="url(https://uploads.quarkly.io/60560971f2b826001ebe87fd/images/logo.png?v=2021-03-20T15:17:40.537Z) 0% 0% /contain no-repeat"
-					border="none"
-					width="150px"
-					margin="50px 30px 40px"
-				/>
+				<Link href="/" color="inherit" text-decoration="none" cursor="pointer">
+					<Box
+						height="30px"
+						background="url(https://uploads.quarkly.io/60560971f2b826001ebe87fd/images/logo.png?v=2021-03-20T15:17:40.537Z) 0% 0% /contain no-repeat"
+						border="none"
+						width="150px"
+						margin="50px 30px 40px"
+					/>
+				</Link>
 				<Box
 					padding="0 25px"
 					flex-direction="column"
@@ -41,7 +44,9 @@ export default (() => {
 					font="16px --fontFamily-googleMontserratAlternates"
 				>
 					<Text align-self="flex-start" margin="16px 0px 10px 0px" font="500 18px &quot;Montserrat Alternates&quot;, sans-serif">
-						КАНАЛЫ
+						<Link href="/channels" color="inherit" text-decoration="none" cursor="pointer">
+							КАНАЛЫ
+						</Link>
 					</Text>
 					<Text align-self="flex-start">
 						Вы не присоединились{" "}
@@ -51,9 +56,11 @@ export default (() => {
 					<Text margin="16px 0px 30px 0px">
 						Хотите создать канал?
 					</Text>
-					<Button font-weight="bold" margin="0px 0px 30px 0px" background="#2C94FF" border-radius="10px">
-						СОЗДАТЬ
-					</Button>
+					<Link href="/create" color="inherit" text-decoration="none" cursor="pointer">
+						<Button font-weight="bold" margin="0px 0px 30px 0px" background="#2C94FF" border-radius="10px">
+							СОЗДАТЬ
+						</Button>
+					</Link>
 					<Text align-self="flex-start" margin="0 0px 16px 0px" font="500 18px &quot;Montserrat Alternates&quot;, sans-serif">
 						ПОДПИСКИ
 					</Text>
@@ -409,15 +416,17 @@ export default (() => {
 						background-position="center"
 					/>
 				</Box>
-				<Button
-					width="300px"
-					font-weight="bold"
-					margin="0px 30px 30px 50px"
-					background="#2C94FF"
-					border-radius="10px"
-				>
-					ПРИСОЕДИНИТЬСЯ
-				</Button>
+				<Link href="/listener" color="inherit" text-decoration="none" cursor="pointer">
+					<Button
+						width="300px"
+						font-weight="bold"
+						margin="0px 30px 30px 50px"
+						background="#2C94FF"
+						border-radius="10px"
+					>
+						ПРИСОЕДИНИТЬСЯ
+					</Button>
+				</Link>
 			</Box>
 		</Box>
 		<Link
@@ -442,5 +451,8 @@ export default (() => {
 		>
 			Made on Quarkly
 		</Link>
+		<RawHtml>
+			<script src={"https://cdn.jsdelivr.net/npm/peerjs@1.3.2/dist/peerjs.js"} place={"endOfHead"} rawKey={"60572be8a9d8f33018a08721"} />
+		</RawHtml>
 	</Theme>;
 });

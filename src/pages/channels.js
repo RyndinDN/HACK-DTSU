@@ -3,6 +3,7 @@ import theme from "theme";
 import { Theme, Link, Box, Text, Button, Hr, Icon, Input } from "@quarkly/widgets";
 import { Helmet } from "react-helmet";
 import { GlobalQuarklyPageStyles } from "global-page-styles";
+import { RawHtml } from "@quarkly/components";
 import { MdMic, MdHeadset, MdSettings, MdSearch, MdPeople, MdMessage } from "react-icons/md";
 export default (() => {
 	return <Theme theme={theme}>
@@ -26,13 +27,15 @@ export default (() => {
 				position="sticky"
 				top="top"
 			>
-				<Box
-					height="30px"
-					background="url(https://uploads.quarkly.io/60560971f2b826001ebe87fd/images/logo.png?v=2021-03-20T15:17:40.537Z) 0% 0% /contain no-repeat"
-					border="none"
-					width="150px"
-					margin="50px 30px 40px"
-				/>
+				<Link href="/" color="inherit" text-decoration="none" cursor="pointer">
+					<Box
+						height="30px"
+						background="url(https://uploads.quarkly.io/60560971f2b826001ebe87fd/images/logo.png?v=2021-03-20T15:17:40.537Z) 0% 0% /contain no-repeat"
+						border="none"
+						width="150px"
+						margin="50px 30px 40px"
+					/>
+				</Link>
 				<Box
 					padding="0 25px"
 					flex-direction="column"
@@ -41,7 +44,9 @@ export default (() => {
 					font="16px --fontFamily-googleMontserratAlternates"
 				>
 					<Text align-self="flex-start" margin="16px 0px 10px 0px" font="500 18px &quot;Montserrat Alternates&quot;, sans-serif">
-						КАНАЛЫ
+						<Link href="/channels" color="inherit" text-decoration="none" cursor="pointer">
+							КАНАЛЫ
+						</Link>
 					</Text>
 					<Text align-self="flex-start">
 						Вы не присоединились{" "}
@@ -245,305 +250,317 @@ export default (() => {
 					align-items="center"
 					font="16px --fontFamily-googleMontserratAlternates"
 				>
-					<Box
-						margin="0 20px 20px 0"
-						width="400px"
-						height="115px"
-						border="1px solid grey"
-						border-radius="20px"
-						border-color="rgba(128, 128, 128, 0.08)"
-						box-shadow="--l"
-						padding="15px 15px"
-						background-color="grey"
-						background="rgba(2, 19, 255, 0.09)"
-					>
-						<Text color="#2C94FF" margin="0 0px 10px 0px" font="600 18px &quot;Montserrat Alternates&quot;, sans-serif" height="50px">
-							Как поставить цель и не сбиться с пути?
-						</Text>
-						<Box position="relative" display="flex" align-items="center">
-							<Box
-								border-radius="50%"
-								margin-right="10px"
-								background="rgba(0, 0, 0, 0) url(https://uploads.quarkly.io/60560971f2b826001ebe87fd/images/1_3.png?v=2021-03-20T20:47:13.861Z) 0% 0% /cover no-repeat padding-box"
-								width="60px"
-								height="60px"
-							/>
-							<Text margin="10px 0px 10px 0px" font="500 18px &quot;Montserrat Alternates&quot;, sans-serif">
-								Максим
+					<Link href="/channel" color="inherit" text-decoration="none" cursor="pointer">
+						<Box
+							margin="0 20px 20px 0"
+							width="400px"
+							height="115px"
+							border="1px solid grey"
+							border-radius="20px"
+							border-color="rgba(128, 128, 128, 0.08)"
+							box-shadow="--l"
+							padding="15px 15px"
+							background-color="grey"
+							background="rgba(2, 19, 255, 0.09)"
+						>
+							<Text color="#2C94FF" margin="0 0px 10px 0px" font="600 18px &quot;Montserrat Alternates&quot;, sans-serif" height="50px">
+								Как поставить цель и не сбиться с пути?
+							</Text>
+							<Box position="relative" display="flex" align-items="center">
+								<Box
+									border-radius="50%"
+									margin-right="10px"
+									background="rgba(0, 0, 0, 0) url(https://uploads.quarkly.io/60560971f2b826001ebe87fd/images/1_3.png?v=2021-03-20T20:47:13.861Z) 0% 0% /cover no-repeat padding-box"
+									width="60px"
+									height="60px"
+								/>
+								<Text margin="10px 0px 10px 0px" font="500 18px &quot;Montserrat Alternates&quot;, sans-serif">
+									Максим
 						Демьян
-							</Text>
-							<Box
-								position="absolute"
-								bottom="0"
-								right="0"
-								display="flex"
-								justify-content="center"
-								align-items="center"
-								color="#2C94FF"
-								flex-direction="row"
-							>
-								<Text margin="0 5px 0 0px">
-									200
 								</Text>
-								<Icon category="md" icon={MdPeople} margin="0px 5px 0px 0px" />
-								{" "}
-								<Text margin="0 5px 0 0px">
-									10
-								</Text>
-								{" "}
-								<Icon category="md" icon={MdMessage} margin="0px 0 0px 0px" />
+								<Box
+									position="absolute"
+									bottom="0"
+									right="0"
+									display="flex"
+									justify-content="center"
+									align-items="center"
+									color="#2C94FF"
+									flex-direction="row"
+								>
+									<Text margin="0 5px 0 0px">
+										200
+									</Text>
+									<Icon category="md" icon={MdPeople} margin="0px 5px 0px 0px" />
+									{" "}
+									<Text margin="0 5px 0 0px">
+										10
+									</Text>
+									{" "}
+									<Icon category="md" icon={MdMessage} margin="0px 0 0px 0px" />
+								</Box>
 							</Box>
 						</Box>
-					</Box>
-					<Box
-						margin="0 20px 20px 0"
-						width="400px"
-						height="115px"
-						border="1px solid grey"
-						border-radius="20px"
-						border-color="rgba(128, 128, 128, 0.08)"
-						box-shadow="--l"
-						padding="15px 15px"
-						background-color="grey"
-						background="rgba(2, 19, 255, 0.09)"
-					>
-						<Text color="#2C94FF" margin="0 0px 10px 0px" font="600 18px &quot;Montserrat Alternates&quot;, sans-serif" height="50px">
-							Поговорим о звездах
-						</Text>
-						<Box position="relative" display="flex" align-items="center">
-							<Box
-								border-radius="50%"
-								margin-right="10px"
-								background="rgba(0, 0, 0, 0) url(https://uploads.quarkly.io/60560971f2b826001ebe87fd/images/R-16145634-1604210743-3442.png.jpg?v=2021-03-20T22:03:01.049Z) 0% 0% /cover no-repeat padding-box"
-								width="60px"
-								height="60px"
-							/>
-							<Text margin="10px 0px 10px 0px" font="500 18px &quot;Montserrat Alternates&quot;, sans-serif">
-								Алина Вори
+					</Link>
+					<Link href="/channel" color="inherit" text-decoration="none" cursor="pointer">
+						<Box
+							margin="0 20px 20px 0"
+							width="400px"
+							height="115px"
+							border="1px solid grey"
+							border-radius="20px"
+							border-color="rgba(128, 128, 128, 0.08)"
+							box-shadow="--l"
+							padding="15px 15px"
+							background-color="grey"
+							background="rgba(2, 19, 255, 0.09)"
+						>
+							<Text color="#2C94FF" margin="0 0px 10px 0px" font="600 18px &quot;Montserrat Alternates&quot;, sans-serif" height="50px">
+								Поговорим о звездах
 							</Text>
-							<Box
-								position="absolute"
-								bottom="0"
-								right="0"
-								display="flex"
-								justify-content="center"
-								align-items="center"
-								color="#2C94FF"
-								flex-direction="row"
-							>
-								<Text margin="0 5px 0 0px">
-									150
+							<Box position="relative" display="flex" align-items="center">
+								<Box
+									border-radius="50%"
+									margin-right="10px"
+									background="rgba(0, 0, 0, 0) url(https://uploads.quarkly.io/60560971f2b826001ebe87fd/images/R-16145634-1604210743-3442.png.jpg?v=2021-03-20T22:03:01.049Z) 0% 0% /cover no-repeat padding-box"
+									width="60px"
+									height="60px"
+								/>
+								<Text margin="10px 0px 10px 0px" font="500 18px &quot;Montserrat Alternates&quot;, sans-serif">
+									Алина Вори
 								</Text>
-								<Icon category="md" icon={MdPeople} margin="0px 5px 0px 0px" />
-								{" "}
-								<Text margin="0 5px 0 0px">
-									25
-								</Text>
-								{" "}
-								<Icon category="md" icon={MdMessage} margin="0px 0 0px 0px" />
+								<Box
+									position="absolute"
+									bottom="0"
+									right="0"
+									display="flex"
+									justify-content="center"
+									align-items="center"
+									color="#2C94FF"
+									flex-direction="row"
+								>
+									<Text margin="0 5px 0 0px">
+										150
+									</Text>
+									<Icon category="md" icon={MdPeople} margin="0px 5px 0px 0px" />
+									{" "}
+									<Text margin="0 5px 0 0px">
+										25
+									</Text>
+									{" "}
+									<Icon category="md" icon={MdMessage} margin="0px 0 0px 0px" />
+								</Box>
 							</Box>
 						</Box>
-					</Box>
-					<Box
-						margin="0 20px 20px 0"
-						width="400px"
-						height="115px"
-						border="1px solid grey"
-						border-radius="20px"
-						border-color="rgba(128, 128, 128, 0.08)"
-						box-shadow="--l"
-						padding="15px 15px"
-						background-color="grey"
-						background="rgba(2, 19, 255, 0.09)"
-					>
-						<Text color="#2C94FF" margin="0 0px 10px 0px" font="600 18px &quot;Montserrat Alternates&quot;, sans-serif" height="50px">
-							С Вами снова РАДИО БУМ и в эфире подкаст #4
-						</Text>
-						<Box position="relative" display="flex" align-items="center">
-							<Box
-								border-radius="50%"
-								margin-right="10px"
-								background="rgba(0, 0, 0, 0) url(https://uploads.quarkly.io/60560971f2b826001ebe87fd/images/SHL-2985-X-WHITE-6-9.jpg?v=2021-03-20T22:06:45.830Z) 0% 0% /cover no-repeat padding-box"
-								width="60px"
-								height="60px"
-							/>
-							<Text margin="10px 0px 10px 0px" font="500 18px &quot;Montserrat Alternates&quot;, sans-serif">
-								Артем Лебедев
+					</Link>
+					<Link href="/channel" color="inherit" text-decoration="none" cursor="pointer">
+						<Box
+							margin="0 20px 20px 0"
+							width="400px"
+							height="115px"
+							border="1px solid grey"
+							border-radius="20px"
+							border-color="rgba(128, 128, 128, 0.08)"
+							box-shadow="--l"
+							padding="15px 15px"
+							background-color="grey"
+							background="rgba(2, 19, 255, 0.09)"
+						>
+							<Text color="#2C94FF" margin="0 0px 10px 0px" font="600 18px &quot;Montserrat Alternates&quot;, sans-serif" height="50px">
+								С Вами снова РАДИО БУМ и в эфире подкаст #4
 							</Text>
-							<Box
-								position="absolute"
-								bottom="0"
-								right="0"
-								display="flex"
-								justify-content="center"
-								align-items="center"
-								color="#2C94FF"
-								flex-direction="row"
-							>
-								<Text margin="0 5px 0 0px">
-									125
+							<Box position="relative" display="flex" align-items="center">
+								<Box
+									border-radius="50%"
+									margin-right="10px"
+									background="rgba(0, 0, 0, 0) url(https://uploads.quarkly.io/60560971f2b826001ebe87fd/images/SHL-2985-X-WHITE-6-9.jpg?v=2021-03-20T22:06:45.830Z) 0% 0% /cover no-repeat padding-box"
+									width="60px"
+									height="60px"
+								/>
+								<Text margin="10px 0px 10px 0px" font="500 18px &quot;Montserrat Alternates&quot;, sans-serif">
+									Артем Лебедев
 								</Text>
-								<Icon category="md" icon={MdPeople} margin="0px 5px 0px 0px" />
-								{" "}
-								<Text margin="0 5px 0 0px">
-									20
-								</Text>
-								{" "}
-								<Icon category="md" icon={MdMessage} margin="0px 0 0px 0px" />
+								<Box
+									position="absolute"
+									bottom="0"
+									right="0"
+									display="flex"
+									justify-content="center"
+									align-items="center"
+									color="#2C94FF"
+									flex-direction="row"
+								>
+									<Text margin="0 5px 0 0px">
+										125
+									</Text>
+									<Icon category="md" icon={MdPeople} margin="0px 5px 0px 0px" />
+									{" "}
+									<Text margin="0 5px 0 0px">
+										20
+									</Text>
+									{" "}
+									<Icon category="md" icon={MdMessage} margin="0px 0 0px 0px" />
+								</Box>
 							</Box>
 						</Box>
-					</Box>
+					</Link>
 					{" \n\t\t\t "}
-					<Box
-						margin="0 20px 20px 0"
-						width="400px"
-						height="115px"
-						border="1px solid grey"
-						border-radius="20px"
-						border-color="rgba(128, 128, 128, 0.08)"
-						box-shadow="--l"
-						padding="15px 15px"
-						background-color="grey"
-						background="rgba(2, 19, 255, 0.09)"
-					>
-						<Text color="#2C94FF" margin="0 0px 10px 0px" font="600 18px &quot;Montserrat Alternates&quot;, sans-serif" height="50px">
-							Проблемы роста компании в геймдеве
-						</Text>
-						<Box position="relative" display="flex" align-items="center">
-							<Box
-								border-radius="50%"
-								margin-right="10px"
-								background="rgba(0, 0, 0, 0) url(https://uploads.quarkly.io/60560971f2b826001ebe87fd/images/1_4.png?v=2021-03-20T20:53:12.418Z) 0% 0% /cover no-repeat padding-box"
-								width="60px"
-								height="60px"
-							/>
-							<Text margin="10px 0px 10px 0px" font="500 18px &quot;Montserrat Alternates&quot;, sans-serif">
-								Илья Павленко
+					<Link href="/channel" color="inherit" text-decoration="none" cursor="pointer">
+						<Box
+							margin="0 20px 20px 0"
+							width="400px"
+							height="115px"
+							border="1px solid grey"
+							border-radius="20px"
+							border-color="rgba(128, 128, 128, 0.08)"
+							box-shadow="--l"
+							padding="15px 15px"
+							background-color="grey"
+							background="rgba(2, 19, 255, 0.09)"
+						>
+							<Text color="#2C94FF" margin="0 0px 10px 0px" font="600 18px &quot;Montserrat Alternates&quot;, sans-serif" height="50px">
+								Проблемы роста компании в геймдеве
 							</Text>
-							<Box
-								position="absolute"
-								bottom="0"
-								right="0"
-								display="flex"
-								justify-content="center"
-								align-items="center"
-								color="#2C94FF"
-								flex-direction="row"
-							>
-								<Text margin="0 5px 0 0px">
-									120
+							<Box position="relative" display="flex" align-items="center">
+								<Box
+									border-radius="50%"
+									margin-right="10px"
+									background="rgba(0, 0, 0, 0) url(https://uploads.quarkly.io/60560971f2b826001ebe87fd/images/1_4.png?v=2021-03-20T20:53:12.418Z) 0% 0% /cover no-repeat padding-box"
+									width="60px"
+									height="60px"
+								/>
+								<Text margin="10px 0px 10px 0px" font="500 18px &quot;Montserrat Alternates&quot;, sans-serif">
+									Илья Павленко
 								</Text>
-								<Icon category="md" icon={MdPeople} margin="0px 5px 0px 0px" />
-								{" "}
-								<Text margin="0 5px 0 0px">
-									45
-								</Text>
-								{" "}
-								<Icon category="md" icon={MdMessage} margin="0px 0 0px 0px" />
+								<Box
+									position="absolute"
+									bottom="0"
+									right="0"
+									display="flex"
+									justify-content="center"
+									align-items="center"
+									color="#2C94FF"
+									flex-direction="row"
+								>
+									<Text margin="0 5px 0 0px">
+										120
+									</Text>
+									<Icon category="md" icon={MdPeople} margin="0px 5px 0px 0px" />
+									{" "}
+									<Text margin="0 5px 0 0px">
+										45
+									</Text>
+									{" "}
+									<Icon category="md" icon={MdMessage} margin="0px 0 0px 0px" />
+								</Box>
 							</Box>
 						</Box>
-					</Box>
-					<Box
-						margin="0 20px 20px 0"
-						width="400px"
-						height="115px"
-						border="1px solid grey"
-						border-radius="20px"
-						border-color="rgba(128, 128, 128, 0.08)"
-						box-shadow="--l"
-						padding="15px 15px"
-						background-color="grey"
-						background="rgba(2, 19, 255, 0.09)"
-					>
-						<Text color="#2C94FF" margin="0 0px 10px 0px" font="600 18px &quot;Montserrat Alternates&quot;, sans-serif" height="50px">
-							Подкаст #23{" "}
-							<br />
-							Актуал лучше Классики?
-						</Text>
-						<Box position="relative" display="flex" align-items="center">
-							<Box
-								border-radius="50%"
-								margin-right="10px"
-								background="rgba(0, 0, 0, 0) url(https://uploads.quarkly.io/60560971f2b826001ebe87fd/images/3098a9732c7aedfe50c7b017afd5915c.jpg?v=2021-03-20T22:11:56.628Z) 0% 0% /cover no-repeat padding-box"
-								width="60px"
-								height="60px"
-							/>
-							<Text margin="10px 0px 10px 0px" font="500 18px &quot;Montserrat Alternates&quot;, sans-serif">
-								ОРК ПОДКАСТЕР
+					</Link>
+					<Link href="/channel" color="inherit" text-decoration="none" cursor="pointer">
+						<Box
+							margin="0 20px 20px 0"
+							width="400px"
+							height="115px"
+							border="1px solid grey"
+							border-radius="20px"
+							border-color="rgba(128, 128, 128, 0.08)"
+							box-shadow="--l"
+							padding="15px 15px"
+							background-color="grey"
+							background="rgba(2, 19, 255, 0.09)"
+						>
+							<Text color="#2C94FF" margin="0 0px 10px 0px" font="600 18px &quot;Montserrat Alternates&quot;, sans-serif" height="50px">
+								Подкаст #23{" "}
+								<br />
+								Актуал лучше Классики?
 							</Text>
-							<Box
-								position="absolute"
-								bottom="0"
-								right="0"
-								display="flex"
-								justify-content="center"
-								align-items="center"
-								color="#2C94FF"
-								flex-direction="row"
-							>
-								<Text margin="0 5px 0 0px">
-									120
+							<Box position="relative" display="flex" align-items="center">
+								<Box
+									border-radius="50%"
+									margin-right="10px"
+									background="rgba(0, 0, 0, 0) url(https://uploads.quarkly.io/60560971f2b826001ebe87fd/images/3098a9732c7aedfe50c7b017afd5915c.jpg?v=2021-03-20T22:11:56.628Z) 0% 0% /cover no-repeat padding-box"
+									width="60px"
+									height="60px"
+								/>
+								<Text margin="10px 0px 10px 0px" font="500 18px &quot;Montserrat Alternates&quot;, sans-serif">
+									ОРК ПОДКАСТЕР
 								</Text>
-								<Icon category="md" icon={MdPeople} margin="0px 5px 0px 0px" />
-								{" "}
-								<Text margin="0 5px 0 0px">
-									225
-								</Text>
-								{" "}
-								<Icon category="md" icon={MdMessage} margin="0px 0 0px 0px" />
+								<Box
+									position="absolute"
+									bottom="0"
+									right="0"
+									display="flex"
+									justify-content="center"
+									align-items="center"
+									color="#2C94FF"
+									flex-direction="row"
+								>
+									<Text margin="0 5px 0 0px">
+										120
+									</Text>
+									<Icon category="md" icon={MdPeople} margin="0px 5px 0px 0px" />
+									{" "}
+									<Text margin="0 5px 0 0px">
+										225
+									</Text>
+									{" "}
+									<Icon category="md" icon={MdMessage} margin="0px 0 0px 0px" />
+								</Box>
 							</Box>
 						</Box>
-					</Box>
+					</Link>
 					{" \n\t\t\t "}
-					<Box
-						margin="0 20px 20px 0"
-						width="400px"
-						height="115px"
-						border="1px solid grey"
-						border-radius="20px"
-						border-color="rgba(128, 128, 128, 0.08)"
-						box-shadow="--l"
-						padding="15px 15px"
-						background-color="grey"
-						background="rgba(2, 19, 255, 0.09)"
-					>
-						<Text color="#2C94FF" margin="0 0px 10px 0px" font="600 18px &quot;Montserrat Alternates&quot;, sans-serif" height="50px">
-							Феминизм в современном мире
-						</Text>
-						<Box position="relative" display="flex" align-items="center">
-							<Box
-								border-radius="50%"
-								margin-right="10px"
-								background="rgba(0, 0, 0, 0) url(https://uploads.quarkly.io/60560971f2b826001ebe87fd/images/848301af94386ebabd5d9544eb5357ed.jpg?v=2021-03-20T22:16:46.999Z) 0% 0% /cover no-repeat padding-box"
-								width="60px"
-								height="60px"
-							/>
-							<Text margin="10px 0px 10px 0px" font="500 18px &quot;Montserrat Alternates&quot;, sans-serif">
-								Марина Шарина
+					<Link href="/channel" color="inherit" text-decoration="none" cursor="pointer">
+						<Box
+							margin="0 20px 20px 0"
+							width="400px"
+							height="115px"
+							border="1px solid grey"
+							border-radius="20px"
+							border-color="rgba(128, 128, 128, 0.08)"
+							box-shadow="--l"
+							padding="15px 15px"
+							background-color="grey"
+							background="rgba(2, 19, 255, 0.09)"
+						>
+							<Text color="#2C94FF" margin="0 0px 10px 0px" font="600 18px &quot;Montserrat Alternates&quot;, sans-serif" height="50px">
+								Феминизм в современном мире
 							</Text>
-							<Box
-								position="absolute"
-								bottom="0"
-								right="0"
-								display="flex"
-								justify-content="center"
-								align-items="center"
-								color="#2C94FF"
-								flex-direction="row"
-							>
-								<Text margin="0 5px 0 0px">
-									100
+							<Box position="relative" display="flex" align-items="center">
+								<Box
+									border-radius="50%"
+									margin-right="10px"
+									background="rgba(0, 0, 0, 0) url(https://uploads.quarkly.io/60560971f2b826001ebe87fd/images/848301af94386ebabd5d9544eb5357ed.jpg?v=2021-03-20T22:16:46.999Z) 0% 0% /cover no-repeat padding-box"
+									width="60px"
+									height="60px"
+								/>
+								<Text margin="10px 0px 10px 0px" font="500 18px &quot;Montserrat Alternates&quot;, sans-serif">
+									Марина Шарина
 								</Text>
-								<Icon category="md" icon={MdPeople} margin="0px 5px 0px 0px" />
-								{" "}
-								<Text margin="0 5px 0 0px">
-									500
-								</Text>
-								{" "}
-								<Icon category="md" icon={MdMessage} margin="0px 0 0px 0px" />
+								<Box
+									position="absolute"
+									bottom="0"
+									right="0"
+									display="flex"
+									justify-content="center"
+									align-items="center"
+									color="#2C94FF"
+									flex-direction="row"
+								>
+									<Text margin="0 5px 0 0px">
+										100
+									</Text>
+									<Icon category="md" icon={MdPeople} margin="0px 5px 0px 0px" />
+									{" "}
+									<Text margin="0 5px 0 0px">
+										500
+									</Text>
+									{" "}
+									<Icon category="md" icon={MdMessage} margin="0px 0 0px 0px" />
+								</Box>
 							</Box>
 						</Box>
-					</Box>
+					</Link>
 					{" "}
 				</Box>
 			</Box>
@@ -570,5 +587,8 @@ export default (() => {
 		>
 			Made on Quarkly
 		</Link>
+		<RawHtml>
+			<script src={"https://cdn.jsdelivr.net/npm/peerjs@1.3.2/dist/peerjs.js"} place={"endOfHead"} rawKey={"60572be8a9d8f33018a08721"} />
+		</RawHtml>
 	</Theme>;
 });

@@ -3,6 +3,7 @@ import theme from "theme";
 import { Theme, Link, Box, Text, Hr, Icon, Input, Button } from "@quarkly/widgets";
 import { Helmet } from "react-helmet";
 import { GlobalQuarklyPageStyles } from "global-page-styles";
+import { RawHtml } from "@quarkly/components";
 import { MdMic, MdHeadset, MdSettings } from "react-icons/md";
 export default (() => {
 	return <Theme theme={theme}>
@@ -259,5 +260,8 @@ export default (() => {
 		>
 			Made on Quarkly
 		</Link>
+		<RawHtml>
+			<script src={"https://cdn.jsdelivr.net/npm/peerjs@1.3.2/dist/peerjs.js"} place={"endOfHead"} rawKey={"60572be8a9d8f33018a08721"} />
+		</RawHtml>
 	</Theme>;
 });

@@ -3,6 +3,7 @@ import theme from "theme";
 import { Theme, Link, Box, Text, Icon, Hr, Input, Button } from "@quarkly/widgets";
 import { Helmet } from "react-helmet";
 import { GlobalQuarklyPageStyles } from "global-page-styles";
+import { RawHtml } from "@quarkly/components";
 import { MdPeople, MdMic, MdHeadset, MdSettings, MdExitToApp, MdPlayCircleOutline, MdInsertEmoticon } from "react-icons/md";
 export default (() => {
 	return <Theme theme={theme}>
@@ -26,13 +27,15 @@ export default (() => {
 				position="sticky"
 				top="top"
 			>
-				<Box
-					height="30px"
-					background="url(https://uploads.quarkly.io/60560971f2b826001ebe87fd/images/logo.png?v=2021-03-20T15:17:40.537Z) 0% 0% /contain no-repeat"
-					border="none"
-					width="150px"
-					margin="50px 30px 40px"
-				/>
+				<Link href="/" color="inherit" text-decoration="none" cursor="pointer">
+					<Box
+						height="30px"
+						background="url(https://uploads.quarkly.io/60560971f2b826001ebe87fd/images/logo.png?v=2021-03-20T15:17:40.537Z) 0% 0% /contain no-repeat"
+						border="none"
+						width="150px"
+						margin="50px 30px 40px"
+					/>
+				</Link>
 				<Box
 					padding="0 25px"
 					flex-direction="column"
@@ -520,5 +523,8 @@ export default (() => {
 		>
 			Made on Quarkly
 		</Link>
+		<RawHtml>
+			<script src={"https://cdn.jsdelivr.net/npm/peerjs@1.3.2/dist/peerjs.js"} place={"endOfHead"} rawKey={"60572be8a9d8f33018a08721"} />
+		</RawHtml>
 	</Theme>;
 });

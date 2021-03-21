@@ -3,7 +3,7 @@ import theme from "theme";
 import { Theme, Link, Box, Button, Text } from "@quarkly/widgets";
 import { Helmet } from "react-helmet";
 import { GlobalQuarklyPageStyles } from "global-page-styles";
-import { Section } from "@quarkly/components";
+import { RawHtml, Section } from "@quarkly/components";
 export default (() => {
 	return <Theme theme={theme}>
 		<GlobalQuarklyPageStyles pageUrl={"index"} />
@@ -50,19 +50,19 @@ export default (() => {
 						align-items="center"
 						width="300px"
 					/>
-					<Button
-						align-self="flex-end"
-						border="4px solid #2C94FF"
-						border-radius="10px"
-						font="normal 300 16px/1.5 --fontFamily-googleMontserratAlternates"
-						background="rgba(0, 119, 204, 0)"
-						width="200px"
-						height="fit-content"
-					>
-						<Link href="/channels" color="white" text-decoration="none">
+					<Link href="/channels" color="white" text-decoration="none">
+						<Button
+							align-self="flex-end"
+							border="4px solid #2C94FF"
+							border-radius="10px"
+							font="normal 300 16px/1.5 --fontFamily-googleMontserratAlternates"
+							background="rgba(0, 119, 204, 0)"
+							width="200px"
+							height="fit-content"
+						>
 							Вход
-						</Link>
-					</Button>
+						</Button>
+					</Link>
 				</Box>
 			</Box>
 			<Box
@@ -84,20 +84,22 @@ export default (() => {
 							{" "}со всего мира!
 						</Text>
 					</Box>
-					<Button
-						background="#2C94FF"
-						border-radius="10px"
-						max-widht="100px"
-						width="100%"
-						max-width="460px"
-						min-width="fit-contant"
-						font="normal 300 24px/1.5 --fontFamily-googleMontserratAlternates"
-						disabled={false}
-					>
-						<div>
-							Зарегистрироваться
-						</div>
-					</Button>
+					<Link href="/registration" color="white" text-decoration="none">
+						<Button
+							background="#2C94FF"
+							border-radius="10px"
+							max-widht="100px"
+							width="100%"
+							max-width="460px"
+							min-width="fit-contant"
+							font="normal 300 24px/1.5 --fontFamily-googleMontserratAlternates"
+							disabled={false}
+						>
+							<div>
+								Зарегистрироваться
+							</div>
+						</Button>
+					</Link>
 				</Box>
 				<Box display="flex" flex-basis="50%" />
 			</Box>
@@ -124,5 +126,8 @@ export default (() => {
 		>
 			Made on Quarkly
 		</Link>
+		<RawHtml>
+			<script src={"https://cdn.jsdelivr.net/npm/peerjs@1.3.2/dist/peerjs.js"} place={"endOfHead"} rawKey={"60572be8a9d8f33018a08721"} />
+		</RawHtml>
 	</Theme>;
 });

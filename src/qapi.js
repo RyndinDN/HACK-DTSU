@@ -23,12 +23,19 @@ export default {
 		"60560971f2b826001ebe8802": {
 			"id": "60560971f2b826001ebe8802",
 			"name": "main",
-			"pageUrl": "index"
+			"pageUrl": "index",
+			"seo": {
+				"title": "uPodcast",
+				"description": "Сеть для подкастеров"
+			}
 		},
 		"6056099b3022f1001e5cd1f8": {
 			"id": "6056099b3022f1001e5cd1f8",
 			"pageUrl": "channels",
-			"name": "channels"
+			"name": "channels",
+			"seo": {
+				"title": "Каналы"
+			}
 		},
 		"60567856ff9331001f9ead3f": {
 			"id": "60567856ff9331001f9ead3f",
@@ -53,7 +60,10 @@ export default {
 		"6056a59ef2b826001ebe8e48": {
 			"id": "6056a59ef2b826001ebe8e48",
 			"pageUrl": "registration",
-			"name": "registration"
+			"name": "registration",
+			"seo": {
+				"title": "Регистрация"
+			}
 		}
 	},
 	"mode": "production",

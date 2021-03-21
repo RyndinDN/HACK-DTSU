@@ -56,9 +56,11 @@ export default (() => {
 					<Text margin="16px 0px 30px 0px">
 						Хотите создать канал?
 					</Text>
-					<Button font-weight="bold" margin="0px 0px 30px 0px" background="#2C94FF" border-radius="10px">
-						СОЗДАТЬ
-					</Button>
+					<Link href="/create" color="inherit" text-decoration="none" cursor="pointer">
+						<Button font-weight="bold" margin="0px 0px 30px 0px" background="#2C94FF" border-radius="10px">
+							СОЗДАТЬ
+						</Button>
+					</Link>
 					<Text align-self="flex-start" margin="0 0px 16px 0px" font="500 18px &quot;Montserrat Alternates&quot;, sans-serif">
 						ПОДПИСКИ
 					</Text>

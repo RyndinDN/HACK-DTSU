@@ -136,9 +136,11 @@ export default (() => {
 						margin="10px 0px 0px 0px"
 						border-width="0px"
 					/>
-					<Button margin="30px 0px 0px 0px" width="fit-contant" font="normal 300 16px/1.5 --fontFamily-googleMontserratAlternates">
-						Зарегистрироваться
-					</Button>
+					<Link href="/channels" color="white" text-decoration="none">
+						<Button margin="30px 0px 0px 0px" width="fit-contant" font="normal 300 16px/1.5 --fontFamily-googleMontserratAlternates">
+							Зарегистрироваться
+						</Button>
+					</Link>
 				</Box>
 			</Box>
 		</Section>

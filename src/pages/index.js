@@ -59,7 +59,9 @@ export default (() => {
 						width="200px"
 						height="fit-content"
 					>
-						Вход
+						<Link href="/channels" color="white" text-decoration="none">
+							Вход
+						</Link>
 					</Button>
 				</Box>
 			</Box>
@@ -90,7 +92,7 @@ export default (() => {
 						max-width="460px"
 						min-width="fit-contant"
 						font="normal 300 24px/1.5 --fontFamily-googleMontserratAlternates"
-						href="/channels"
+						disabled={false}
 					>
 						<div>
 							Зарегистрироваться

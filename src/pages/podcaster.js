@@ -10,7 +10,7 @@ export default (() => {
 		<GlobalQuarklyPageStyles pageUrl={"podcaster"} />
 		<Helmet>
 			<title>
-				Quarkly export
+				Подкаст - С Вами снова ...
 			</title>
 			<meta name={"description"} content={"Web site created using quarkly.io"} />
 			<link rel={"shortcut icon"} href={"https://uploads.quarkly.io/readme/cra/favicon-32x32.ico"} type={"image/x-icon"} />
@@ -293,9 +293,11 @@ export default (() => {
 						border-radius="50%"
 						margin-right="10px"
 						background="rgba(0, 0, 0, 0) url(https://uploads.quarkly.io/60560971f2b826001ebe87fd/images/SHL-2985-X-WHITE-6-9.jpg?v=2021-03-20T22:06:45.830Z) 0% 0% /cover no-repeat padding-box"
+						min-width="100px"
+						min-height="100px"
+						display="flex"
 						width="100px"
 						height="100px"
-						display="flex"
 					/>
 					<Box>
 						<Text color="#2C94FF" margin="10px 0px 5px 0px" font="500 18px &quot;Montserrat Alternates&quot;, sans-serif">

@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useRef, useCallback } from "react";
+import Peer from "peerjs";
 import { v4 as uuidv4 } from "uuid";
 export default function App() {
 	const audioRef = useRef(null);
@@ -10,11 +11,9 @@ export default function App() {
 	useEffect(() => {
 		const peerID = localStorage.getItem("peer-id") || uuidv4();
 		localStorage.setItem("peer-id", peerID);
-		if (!window.Peer) return;
 		const peer = new Peer(peerID);
 		setPeer(peer);
 		peer.on("open", id => {
-			// тут не ошибка?
 			setPeerID(peerID);
 		});
 		peer.on("call", call => {

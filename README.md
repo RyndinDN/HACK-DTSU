@@ -17,6 +17,11 @@
          alt="Create React App version" />
   </a>
   
+  <a href="https://github.com/RyndinDN/HACK-DTSU/pulls">
+    <img src="https://badgen.net/github/prs/RyndinDN/HACK-DTSU" alt="Pull Request Amount">
+  </a>
+  <img src="https://badgen.net/github/last-commit/RyndinDN/HACK-DTSU" alt="Last commit date" />
+            
   <a href="./LICENSE">
     <img src="https://badgen.net/badge/license/MIT/blue"
          alt="License">

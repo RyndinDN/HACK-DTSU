@@ -90,6 +90,7 @@ export default (() => {
 						max-width="460px"
 						min-width="fit-contant"
 						font="normal 300 24px/1.5 --fontFamily-googleMontserratAlternates"
+						href="/channels"
 					>
 						<div>
 							Зарегистрироваться

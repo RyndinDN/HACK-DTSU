@@ -32,27 +32,27 @@ export default {
 		},
 		"60567856ff9331001f9ead3f": {
 			"id": "60567856ff9331001f9ead3f",
-			"pageUrl": "channels1",
+			"pageUrl": "create",
 			"name": "create"
 		},
 		"60568058f029cd001f5e23b9": {
 			"id": "60568058f029cd001f5e23b9",
-			"pageUrl": "channels2",
+			"pageUrl": "channel",
 			"name": "channel"
 		},
 		"60568956f2b826001ebe8d26": {
 			"id": "60568956f2b826001ebe8d26",
-			"pageUrl": "channels21",
+			"pageUrl": "listener",
 			"name": "listener"
 		},
 		"60569660a1e3530020715f45": {
 			"id": "60569660a1e3530020715f45",
-			"pageUrl": "channels211",
+			"pageUrl": "podcaster",
 			"name": "podcaster"
 		},
 		"6056a59ef2b826001ebe8e48": {
 			"id": "6056a59ef2b826001ebe8e48",
-			"pageUrl": "index1",
+			"pageUrl": "registration",
 			"name": "registration"
 		}
 	},

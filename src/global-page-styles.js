@@ -6,11 +6,11 @@ const pageStyles = {
     "404": {},
     "index": {},
     "channels": {},
-    "channels1": {},
-    "channels2": {},
-    "channels21": {},
-    "channels211": {},
-    "index1": {}
+    "create": {},
+    "channel": {},
+    "listener": {},
+    "podcaster": {},
+    "registration": {}
 };
 
 const PageStyles = createGlobalStyle`
